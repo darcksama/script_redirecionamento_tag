@@ -1,0 +1,18 @@
+---colocad na head do site ----Obs código corrigido-----
+
+<b:if cond='data:blog.pageType == "item"'>
+    <link rel="canonical" expr:href='data:blog.canonicalUrl'/>
+</b:if>
+
+
+
+-----colocar em baixo das postagens----
+
+<script>
+    if (window.location.search.includes(“m=1”)) {
+        const urlSemParametro = window.location.href.split(“?m=1”)[0];
+        document.write(‘<link rel=”canonical” href=”‘ + urlSemParametro + ‘”>’);
+    }
+</script>
+
+
